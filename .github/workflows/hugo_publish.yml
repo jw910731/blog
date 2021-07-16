@@ -2,8 +2,6 @@ name: github pages
 
 on:
   push:
-    branches:    
-      - master
     paths: ["content/**", ".github/workflows/hugo_publish.yml", "config.toml", "layouts/**", "static/**"]
 
 jobs:
@@ -26,6 +24,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/master' # Only deploy on master branch
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
