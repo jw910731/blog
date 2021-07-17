@@ -24,7 +24,6 @@ jobs:
       
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
-        if: ${{ github.event.issue.pull_request }}
         with:
           publish-dir: './public'
           production-branch: master
@@ -33,8 +32,11 @@ jobs:
           enable-pull-request-comment: true
           enable-commit-comment: true
           overwrites-pull-request-comment: true
-          alias: deploy-preview-${{ github.event.issue.number }}
+          alias: deploy-preview-${{ github.event.number }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
+      
+      - name: Debug
+        run: "echo PR: #${{ github.event.number }}"
