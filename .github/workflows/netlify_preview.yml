@@ -1,10 +1,8 @@
 name: github pages
 
 on:
-  push:
-    #paths: ["content/**", ".github/workflows/hugo_publish.yml", "config.toml", "layouts/**", "static/**"]
   pull_request:
-    #types: ["opened", "synchronize"]
+    types: ["opened", "synchronize"]
   
 
 jobs:
@@ -40,6 +38,3 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
-      
-      - name: Debug
-        run: "echo PR: #${{ github.event.number }}"
