@@ -1,6 +1,8 @@
 name: github pages
 
 on:
+  pull_request:
+    types: ["opened", "synchronize"]
   push:
     paths: ["content/**", ".github/workflows/hugo_publish.yml", "config.toml", "layouts/**", "static/**"]
 
