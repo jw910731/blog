@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: jw910731/blog
+  preview_context: Netlify
 media_folder: static/img
 public_folder: /img
 site_url: https://blog.jw910731.me
