@@ -1,6 +1,7 @@
 backend:
   name: git-gateway 
   branch: master
+  repo: jw910731/blog
   preview_context: Netlify
   squash_merges: true
 media_folder: static/img
