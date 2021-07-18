@@ -23,7 +23,7 @@ Secondly, I still had no idea with the unclarified condition which need to met i
 
 And the magic is that when the text contain certain hard coded keywords and it will show the `target_url` or the link pointed by "detail" button after the text as preview link.
 
-Finally, I found a option in the same document, called `preview_context` which can change the keyword that triggers the preview link. I tried it with `github` backend and `git-gateway` backend which both backends are working fine with this option. (Note that I use Github as my Netlify Identity login method. I have not test without login with Github.) Using this option can filter other result from our CI/CD tool.
+Finally, I found a option in the same document, called `preview_context` which can change the keyword that triggers the preview link. I tried it with `github` backend and `git-gateway` backend which both of them are working fine with `preview_context` option. (Note that I use Github as my Netlify Identity login method. I haven't test without login with Github.)
 
 # Summary
 
