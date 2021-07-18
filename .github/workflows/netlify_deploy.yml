@@ -1,8 +1,8 @@
-name: github pages
+name: Netlify Deploy
 
 on:
   push:
-    paths: ["content/**", ".github/workflows/hugo_publish.yml", "config.toml", "layouts/**", "static/**"]
+    paths: ["content/**", ".github/workflows/*", "config.toml", "layouts/**", "static/**"]
 
 jobs:
   deploy:
