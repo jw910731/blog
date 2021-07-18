@@ -27,6 +27,6 @@ Finally, I found a option in the same document, called `preview_context` which c
 
 # Summary
 
-After setting `preview_context` and using the 3rd party Github Action script to deploy my content to Netlify. The CMS is finally showing preview link to me automatically. Though the check preview button is acting weird. It's still better than writing posts in gitpod.
-The codes are public viewable on Github in case you need it. [Link](https://github.com/jw910731/blog)
+After setting `preview_context` and using the 3rd party Github Action to deploy my content to Netlify. The CMS is finally showing preview link to me automatically. Though the check preview button is acting weird. It's still better than writing posts in gitpod.
+My repo of this blog is public viewable on Github in case you need it. [Link](https://github.com/jw910731/blog)
 Also, this blog post is written in the Netlify CMS. The edit experience is quite nice to me.
