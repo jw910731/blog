@@ -15,9 +15,9 @@ The migration at first is rather easy. The migration of static content is quite 
 The Netlify CMS it self is almost working well. Every function work well except Show Preview Link. When saving drafts in editorial workflow, it should create or force push a Pull Request and wait for CD pipeline to run. If the result of deployment met a certain condition. The "View Preview" button shows up.
 But the mysterious condition is not clearly stated in the document. I had no idea why I had already setup the CI pipeline but the View Preview button is not showing up.
 
-First, I made a mistake that I was used to Github Pages' publish method. That is, push the compiled files to a certain branch and it simply serves the content in that branch. Netlify had it's own publish method. I need to integrate my old CI pipeline with it's CLI tool to publish my content to it. The official CLI wrapper of Github Action is too slow to startup. I finally decide to use [this](https://github.com/nwtgck/actions-netlify) Github Action. Which is written in Typescript and run much faster than official tool that need to wait for npm to install the CLI tool.
+I made a mistake that I was used to Github Pages' publish method. That is, push the compiled files to a certain branch and it simply serves the content in that branch. Netlify had it's own publish method. I need to integrate my old CI pipeline with it's CLI tool to publish my content to it. The official CLI wrapper of Github Action is too slow to startup. I finally decide to use [this](https://github.com/nwtgck/actions-netlify) Github Action. Which is written in Typescript and run much faster than official tool that need to wait for npm to install the CLI tool.
 
-Secondly, I still had no idea with the unclarified condition which need to met in order for Netlify CMS to know that this is the build result of preview link. After searching for several github issue of Netlify CMS and posts on Netlify support forum. I found that in [this document](https://www.netlifycms.org/docs/github-backend/#specifying-a-status-for-deploy-previews). It says that Netlify CMS check the "context" of the commit status whether containing keywords related to deployment preview. **What is keyword related to deployment preview??** I found that the "context" of commit status is actually the text in check section of PR.
+I still had no idea with the unclarified condition which need to met in order for Netlify CMS to know that this is the build result of preview link. After searching for several github issue of Netlify CMS and posts on Netlify support forum. I found that in [this document](https://www.netlifycms.org/docs/github-backend/#specifying-a-status-for-deploy-previews). It says that Netlify CMS check the "context" of the commit status whether containing keywords related to deployment preview. **What is keyword related to deployment preview??** I found that the "context" of commit status is actually the text in check section of PR.
 
 ![](/img/gh-screenshot.png)
 
@@ -30,6 +30,5 @@ Finally, I found a option in the same document, called `preview_context` which c
 After setting `preview_context` and using the 3rd party Github Action to deploy my content to Netlify. The CMS is finally showing preview link to me automatically. Though the check preview button is acting weird. It's still better than writing posts in gitpod.
 
 By the way, this blog post is written in the Netlify CMS. The edit experience is quite nice to me.
-
 
 My repo of this blog is public viewable on Github in case you need it. [Link](https://github.com/jw910731/blog)
