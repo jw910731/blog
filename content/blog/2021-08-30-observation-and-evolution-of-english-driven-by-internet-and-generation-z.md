@@ -5,6 +5,11 @@ description: Me, as a part of Generation Z, observes the evolutionary of English
   driven by internet. Which leads great impact to the language and its users,
   you and me.
 ---
+# Introduction
+I am a 19 years old undergraduate that came from Taiwan. My mother tongue is Chinese, especially Traditional Chinese in contrast to Simplified Chinese that people from China use. I self recognize that I am bilingual. Though my Chinese is more fluent than English. Due to living and studying in Taiwan and everyone here speaks Chinese.
+I will use the perspective of an English user to talk about the impact on English caused by internet. Hope you can share your observation as an English native speaker or a English user, like me.
+
+# The observation and impact
 I just find out the Generation Z had create hundreds of new phrases and words in English. This impact dramatically affect the language itself and also its users.
 
 Few minutes before writing this posts, I use the word "mispost" in Github issue tracker to explain that we need to develop the delete function of my working project. The spell checker immediately draw the conspicuous (meaning very unpleasant and noticeable.) red underline on my "mispost". The word mispost had been recorded to Urban Dictionary. Meaning I'm not the only one using this word. But that old stubborn system still draw a stupid wavy red line under my "mispost" during writing this post.
@@ -13,7 +18,7 @@ I think this might caused by the dramatic growing English phrases and words. In 
 
 The network had accelerate the connection of peoples. Culture, societies, and other things that worked, grew, evolved slowly in the past are drastically changing nowadays. This is a astonishing and magnificent phenomenon, and it is in displayed in front of us. Even more, we are a part of it. We shall wait and see h0w th!ngs will go and..... (I felt sleepy and there's nothing worth to say. It's time for you to think, and talk about the impact and how you feel in this flood of internet connection.)
 
-## Post script
+# Post script
 To talk about a topic related to English. I think using Chinese to discuss it would be weird. Writing in English is hard. (Compare to Chinese, there's too much words have similar meaning but had slight difference between them.)
 
 During the writing process, to enhance the precision of word usage. I almost checkout every word I used in dictionary, reads their definition and synonyms to find the most suitable word to fully express what I mean and eliminate as much possibility of misleading my readers as I could.
