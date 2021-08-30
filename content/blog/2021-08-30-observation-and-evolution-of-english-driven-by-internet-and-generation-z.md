@@ -26,3 +26,5 @@ During the writing process, to enhance the precision of word usage. I almost che
 Sentences are constantly checking after they were written. To ensure they are in a good shape.
 
 It is such a tiring work to talk about culture evolution, but I think it is crucial for us to aware and observe the tendency of our "communication infrastructure", language. These topics and problems are gaining attraction in Traditional Chinese user community. Due to the cultural dissonance between Traditional Chinese culture and Simplified Chinese culture which the latter is a stronger culture, and the former is more historical. But for English users, maybe these kind of topic and problem is less discussed in contrast to Traditional Chinese community.
+
+Finally, this post is also [posted on my personal Facebook](https://www.facebook.com/jw910731/posts/3847548468679036). My friends and others may discuss at there more than the comment below. Check it out and leave what you think at the comment below or comment on the Facebook post.
