@@ -7,6 +7,7 @@ description: Me, as a part of Generation Z, observes the evolutionary of English
 ---
 # Introduction
 I am a 19 years old undergraduate that came from Taiwan. My mother tongue is Chinese, especially Traditional Chinese in contrast to Simplified Chinese that people from China use. I self recognize that I am bilingual. Though my Chinese is more fluent than English. Due to living and studying in Taiwan and everyone here speaks Chinese.
+
 I will use the perspective of an English user to talk about the impact on English caused by internet. Hope you can share your observation as an English native speaker or a English user, like me.
 
 # The observation and impact
