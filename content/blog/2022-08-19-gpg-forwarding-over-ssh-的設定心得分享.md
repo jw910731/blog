@@ -60,7 +60,6 @@ gpgconf --create-socketdir
 UsePAM yes
 ```
 小提醒一下，隨時靠 `gpgconf --kill gpg-agent` 來重啟 gpg agent ，這樣調整才會生效（當然你如果調了 `/etc/ssh/sshd_config` 就要換重開 sshd service ）
-# 結語
-這樣差不多就完成了，常規的 ssh 與 gpg 設定我沒有寫出來，就靠讀者自己處理了，相信都搞到了 GPG forwarding 了，肯定都有穩定的 gpg 環境。
+# 小結
+這樣差不多就完成了，常規的 ssh 與 gpg 設定我沒有寫出來，就靠讀者自己處理了，相信都已經用到 GPG forwarding 了，肯定都有妥善設定 gpg ，故我就不贅述了。
 我有聽說有人即使 forwarding 成功還是沒辦法做加解密和簽章的，只能說太可憐了，我這裡 forwarding 成功後就可以使用了。
-終於可以是完善了整個開發環境了，讓我可以利用遠端強大的算力與充沛的硬碟空間來輔助筆電端。
