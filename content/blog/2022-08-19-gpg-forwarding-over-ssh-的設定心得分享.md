@@ -5,6 +5,7 @@ description: 說說我在設定 GPG forwarding over SSH 時遇到的各種疑難
 ---
 # 前言
 最近拿到了人生中第一台筆電，遇到的困擾之一就是要處理連回舊有的 Linux 桌機（工作站）。此時會遇到我需要對 git commit 做簽章但 Yubikey 在我手上，遠端電腦無法存取簽章的問題出現，因此需要 GPG forwarding 到遠端電腦上，才能在桌機上繼續完成我的專案。
+本文環境是 macOS 連線到 Arch Linux
 
 # 過程
 照著教學做的我會附上連結並擷取重點，有些自己悟出來的就會寫細一點
@@ -35,16 +36,17 @@ Host <hostname>
     RemoteForward /run/user/<uid>/gnupg/S.gpg-agent /Users/<username>/.gnupg/S.gpg-agent.extra
     RemoteForward /run/user/<uid>/gnupg/S.gpg-agent.ssh /Users/<username>/.gnupg/S.gpg-agent.ssh
     ForwardAgent yes
-    ExitOnForwardFailure yes # 確定你有 forward 成功，失敗直接退出
+    ExitOnForwardFailure yes # 確定你有 forward 成功，失敗直接退出，需要時改成 no 以連線至遠端
 ```
 
-然後我還莫名其妙地加上了一段我不懂的修改，修改遠端的 `/etc/ssh/sshd_config`，加上
+然後我還莫名其妙地加上了一段我不懂的修改，在遠端的 `/etc/ssh/sshd_config` 加上
 ```
 StreamLocalBindUnlink yes
 ```
-相關的文獻可以參考[這篇文章](https://superuser.com/questions/161973/how-can-i-forward-a-gpg-key-via-ssh-agent)
+相關的文獻似乎可以參考[這篇 SuperUser 的文章](https://superuser.com/questions/161973/how-can-i-forward-a-gpg-key-via-ssh-agent)
+
 ## [GnuPG 的官方 wiki](https://wiki.gnupg.org/AgentForwarding)
-關鍵就在 `/run/user/<uid>/gnupg/` 的資料夾有可能不存在，這個資料夾是由 systemd 管理，在使用者「登入」（嚴謹的說是使用 PAM 登入）時建立的。如果這個資料夾不存在，我們 forwarding 就會失敗，因為我們沒有放 unix socket 的目錄，所以我們需要在登入時建立這個目錄，具體的做法就是在**遠端**的 `.zshrc` 或 `.bashrc` 塞入 
+關鍵就在 `/run/user/<uid>/gnupg/` 的資料夾有可能不存在，這個資料夾是由 systemd 管理，在使用者「登入」（嚴謹的說是使用 PAM 登入）時建立的。如果這個資料夾不存在，我們 forwarding 就會失敗，因為我們沒有可以放 unix socket 的目錄，所以我們需要在登入時建立這個目錄，具體的做法就是在**遠端**的 `.zshrc` 或 `.bashrc` 塞入 
 ```
 gpgconf --create-socketdir
 ```
@@ -59,5 +61,6 @@ UsePAM yes
 ```
 小提醒一下，隨時靠 `gpgconf --kill gpg-agent` 來重啟 gpg agent ，這樣調整才會生效（當然你如果調了 `/etc/ssh/sshd_config` 就要換重開 sshd service ）
 # 結語
-這樣差不多就完成了，我有聽說有人即使 forwarding 成功還是沒辦法做加解密和簽章的，只能說太可憐了，我這裡 forwarding 成功後就可以使用了。
+這樣差不多就完成了，常規的 ssh 與 gpg 設定我沒有寫出來，就靠讀者自己處理了，相信都搞到了 GPG forwarding 了，肯定都有穩定的 gpg 環境。
+我有聽說有人即使 forwarding 成功還是沒辦法做加解密和簽章的，只能說太可憐了，我這裡 forwarding 成功後就可以使用了。
 終於可以是完善了整個開發環境了，讓我可以利用遠端強大的算力與充沛的硬碟空間來輔助筆電端。
