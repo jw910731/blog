@@ -1,9 +1,9 @@
 backend:
-  name: git-gateway 
+  name: github 
   branch: master
   repo: jw910731/blog
-  preview_context: Netlify
   squash_merges: true
+  base_url: https://blog.jw910731.me
 media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
