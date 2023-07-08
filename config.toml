@@ -47,15 +47,28 @@ summarylength = 30
 	stackoverflow="11264533/jw910731"
 	gravatar = "jw910731@gmail.com"
 
+# [[menu.main]]
+#     name = "Portfolio"
+#     identifier = "portfolio"
+#     weight = 200
+#     url = "/portfolio/"
+# [[menu.main]]
+#     name = "About"
+#     identifier = "about"
+#     weight = 300
+#     url = "/about/"
 [[menu.main]]
     identifier = "blog"
     name = "blog"
     title = "Blog"
+    weight = 400
     url = "/blog"
 [[menu.main]]
     identifier = "course"
     name = "course"
     title = "Course"
+    weight = 400
     url = "/course"
+
 
 
