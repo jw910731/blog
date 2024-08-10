@@ -4,7 +4,6 @@ backend:
   repo: jw910731/blog
   squash_merges: true
   base_url: https://blog.jw910731.me
-  auth_endpoint: /api/auth
 media_folder: static/img
 public_folder: /img
 publish_mode: editorial_workflow
