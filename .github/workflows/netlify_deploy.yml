@@ -2,21 +2,18 @@ name: Netlify Deploy
 
 on:
  push:
-   paths: ["content/**", ".github/workflows/*", "config.toml", "layouts/**", "static/**"]
+   paths: ["content/**", ".github/workflows/*", "config/**"]
 
 jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.74.2'
+          hugo-version: '0.139.0'
           extended: true
 
       - name: Build

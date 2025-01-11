@@ -19,7 +19,7 @@ I made a mistake that I was used to Github Pages' publish method. That is, push 
 
 I still had no idea with the unclarified condition which need to met in order for Netlify CMS to know that this is the build result of preview link. After searching for several github issue of Netlify CMS and posts on Netlify support forum. I found that in [this document](https://www.netlifycms.org/docs/github-backend/#specifying-a-status-for-deploy-previews). It says that Netlify CMS check the "context" of the commit status whether containing keywords related to deployment preview. **What is keyword related to deployment preview??** I found that the "context" of commit status is actually the text in check section of PR.
 
-![](/img/gh-screenshot.png)
+![](https://blog-img.jw910731.me/gh-screenshot.png)
 
 And the magic is that when the text contain certain hard coded keywords and it will show the `target_url` or the link pointed by "detail" button after the text as preview link.
 
