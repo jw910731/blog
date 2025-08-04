@@ -32,7 +32,7 @@
               modules = [
                 {
                   # https://devenv.sh/reference/options/
-                  packages = [ pkgs.hugo ];
+                  packages = [ pkgs.hugo pkgs.nodejs ];
                 }
               ];
             };
