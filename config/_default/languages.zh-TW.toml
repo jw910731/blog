@@ -1,11 +1,11 @@
 disabled = false
 languageCode = "zh-TW"
-languageName = "正體中文(Traditional Chinese)"
+languageName = "繁體中文(Traditional Chinese)"
 weight = 1
 title = "jw910731's 部落格"
 
 [params]
-displayName = "正體中文(Traditional Chinese)"
+displayName = "繁體中文(Traditional Chinese)"
 isoCode = "zh-TW"
 rtl = false
 dateFormat = "2006/01/06"

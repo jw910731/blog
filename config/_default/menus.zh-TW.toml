@@ -69,14 +69,8 @@
 #   weight = 20
 
 [[main]]
-    identifier = "blog"
-    name = "部落格"
-    title = "部落格"
+    identifier = "posts"
+    name = "貼文"
+    title = "貼文"
     weight = 200
-    url = "/blog"
-[[main]]
-    identifier = "course"
-    name = "課程紀錄"
-    title = "課程"
-    weight = 400
-    url = "/course"
+    pageRef = "posts"

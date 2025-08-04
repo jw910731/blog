@@ -8,6 +8,8 @@ math: false
 toc: false
 ---
 
+{{< katex >}}
+
 # 題目
 
 |      |                            Origin                            | Title                                                        |

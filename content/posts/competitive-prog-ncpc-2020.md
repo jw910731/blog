@@ -8,6 +8,8 @@ math: false
 toc: false
 ---
 
+{{< katex >}}
+
 # 題目
 
 [個人備份載點](https://drive.google.com/drive/folders/1U71Zdg5NYscMbiTF8pmWxHOY0LCBsyxp?usp=sharing)
@@ -36,7 +38,7 @@ PA: 聽說是歐幾里德擴展模板題，但我們這隊沒人聽說過是什�
 
 PB: 奇怪勞動題，沒仔細看
 
-PC: 帶修改(樹邊權)的樹直徑，但事實上修改次數夠少，每次都O(V)求樹直徑是可以的，但我把它想成heavy light decomposition跟LCA了，連精神都沒能AC
+PC: 帶修改(樹邊權)的樹直徑，但事實上修改次數夠少，每次都\(O(V)\)求樹直徑是可以的，但我把它想成heavy light decomposition跟LCA了，連精神都沒能AC
 
 PD: Burrows–Wheeler transform的裸題，但最後想法爛掉了
 

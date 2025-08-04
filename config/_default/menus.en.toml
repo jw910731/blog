@@ -69,14 +69,8 @@
 #   weight = 20
 
 [[main]]
-    identifier = "blog"
-    name = "Blog"
-    title = "Blog"
+    identifier = "posts"
+    name = "Posts"
+    title = "Posts"
     weight = 200
-    url = "/blog"
-[[main]]
-    identifier = "course"
-    name = "Course"
-    title = "Course"
-    weight = 400
-    url = "/course"
+    pageRef = "posts"
